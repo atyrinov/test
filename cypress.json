@@ -1,0 +1,18 @@
+{
+  "viewportWidth": 1400,
+  "viewportHeight": 900,
+  "retries": 2,
+  "defaultCommandTimeout": 5000,
+  "pageLoadTimeout": 50000,
+  "baseUrl": "https://bbstaticwebappstaging.azurewebsites.net/",
+  "env": {
+    "username": "autotest@f4ntec.com",
+    "password": "B_123456"
+  },
+  "chromeWebSecurity": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "projectId": "qam7ue"
+}

@@ -1,0 +1,9 @@
+node_modules
+cypress/screenshots/
+cypress/videos/
+cypress/results
+mochawesome-report
+mochawesome.json
+downloads
+cypress/fixtures/large
+

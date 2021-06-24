@@ -1,0 +1,47 @@
+{
+  "name": "f4ntec",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "triggerTests-all": "npx cypress run",
+    "triggerAllTests-blanks": "npx cypress run --spec cypress/integration/Blanks/*",
+    "triggerAllTests-blanks-general": "npx cypress run --spec cypress/integration/GeneralAppearance/* && npx cypress run --spec cypress/integration/Blanks/*",
+    "triggerAllTests-artworks": "npx cypress run --spec cypress/integration/Artworks/*",
+    "triggerAllTests-general": "npx cypress run --spec cypress/integration/GeneralAppearance/*",
+    "triggerAllTests-mockups": "npx cypress run --spec cypress/integration/Mockups/*",
+    "triggerAllTests-productInStore": "npx cypress run --spec cypress/integration/ProductInStore/*",
+    "triggerAllTests-stamps": "npx cypress run --spec cypress/integration/Stamps/*",
+    "triggerAllTests-trims": "npx cypress run --spec cypress/integration/Trims/*",
+    "triggerAllTests-dashboard-test": "npx cypress run --spec cypress/integration/Blanks/* --record --key 099cba38-2ee7-4c15-adee-531c90799b19 --parallel",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 099cba38-2ee7-4c15-adee-531c90799b19",
+    "delete-results": "del /f/s/q cypress/results > nul",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "delete-mochawesome-report": "del /f/s/q mochawesome-report > nul",
+    "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerTests-all && npm run mochawesome-merge",
+    "triggerTests-all-prod": "npx cypress open --env configFile=prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://a_tyrinov@bitbucket.org/brandbowautotests/autotestsui.git"
+  },
+  "author": "f4ntec",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/brandbowautotests/autotestsui#readme",
+  "dependencies": {
+    "cypress-get-table": "^1.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^7.5.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-xpath": "^1.6.0",
+    "faker": "^5.3.1",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}
